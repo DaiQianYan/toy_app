@@ -10,7 +10,17 @@ class UsersController < ApplicationController
   # GET /users/1
   # GET /users/1.json
   def show
+    # 下面两种写法是等价的，现实的都是一个connecton，都没有实现真正的现实微博
+    # @micropost = User.first.microposts
+    # @micropost_all = Micropost.all
+    # a = Micropost.all
+    # n = []
+    # for i in a
+    #   n.append(i)
+    # end
     @micropost = Micropost.first
+
+    contents = 0
   end
 
   # GET /users/new
